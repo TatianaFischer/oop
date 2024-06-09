@@ -73,13 +73,13 @@ export default AeronaveComercialPassageiros;
 <li>Herança: AeronaveComercialPassageiros estende Aeronave, usando a palavra-chave extends. Isso significa que ela herda todos os atributos e métodos da classe Aeronave. </li>
 <li>Construtor: O construtor de AeronaveComercialPassageiros chama o construtor da superclasse (Aeronave) usando super(). Isso inicializa os atributos herdados e, em seguida, inicializa os atributos específicos (companhiaAerea, capacidadePassageiros). </li>
 <li>Polimorfismo: O método exibirDetalhes() é sobrescrito na subclasse para incluir informações adicionais específicas das aeronaves comerciais de passageiros. A palavra-chave super é usada para chamar o método exibirDetalhes() da superclasse, e então adicionar mais detalhes. </li>
-<li>Encapsulamento
+<li>Encapsulamento:
 Os atributos de ambas as classes são definidos no construtor e não são diretamente acessíveis fora da classe. Em vez disso, métodos (como exibirDetalhes()) são fornecidos para acessar e manipular esses dados. </li>
 
 <li>Abstração
 Ambas as classes abstraem a complexidade de uma aeronave real, expondo apenas os atributos e comportamentos relevantes para o domínio do problema (gerenciamento de aeronaves e planos de voo). </li>
 
-<h4>Exemplo de Uso<h4>
+<h4>Exemplo de Uso</h4>
 Vamos ver como essas classes podem ser usadas em um exemplo:
 
 main.js
