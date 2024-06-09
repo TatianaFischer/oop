@@ -98,3 +98,19 @@ Neste exemplo, criamos uma instância de AeronaveComercialPassageiros e chamamos
 
 Conclusão
 A POO é uma maneira poderosa de organizar e estruturar seu código. Utilizando conceitos como classes, herança, encapsulamento, polimorfismo e abstração, você pode criar sistemas modulares, reutilizáveis e fáceis de manter. No caso das classes Aeronave e AeronaveComercialPassageiros, vemos como a herança permite especializar comportamentos e atributos de uma classe base, mantendo um design claro e eficiente.
+
+oop/
+├── src/
+│ ├── main.js
+│ ├── models/
+│ │ ├── Piloto.js
+│ │ ├── AeroNaveParticular.js
+│ │ ├── AeronaveComercialPassageiros.js
+│ │ ├── AeronaveComercialCarga.js
+│ │ ├── Aerovia.js
+│ ├── services/
+│ │ ├── ServicesPilotos.js
+│ │ ├── ServicesAeronaves.js
+│ │ ├── ServicesAerovias.js
+│ │ ├── ServicesPlanosDeVoo.js
+├── package.json

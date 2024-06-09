@@ -1,4 +1,7 @@
-import Aeronave from './Aeronave.js';
+// Classe Derivada: AeronaveComercialPassageiros
+// Essa classe herda os atributos da classe Aeronave e adiciona atributos específicos para aeronaves comerciais de passageiros como a capacidade de passageiros.
+
+import { Aeronave } from './Aeronave.js';
 
 class AeronaveComercialPassageiros extends Aeronave {
   constructor(prefixo, velocidadeCruzeiro, autonomia, companhiaAerea, capacidadePassageiros) {
@@ -12,4 +15,4 @@ class AeronaveComercialPassageiros extends Aeronave {
   }
 }
 
-export default AeronaveComercialPassageiros;
+export { AeronaveComercialPassageiros };
