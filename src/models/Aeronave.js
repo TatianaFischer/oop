@@ -3,6 +3,8 @@
 //Receberá o prefixo da aeronave, tipo da arenave que pode ser Comercial ou Particular, velocidade de cruzeiro e autonomia.
 // A baixo da classe tem o método exibirDetalhes que exibe de maneira mais organizada as informações da aeronave.
 
+
+
 class Aeronave {
   /**
    * Construtor da classe Aeronave.
@@ -12,10 +14,44 @@ class Aeronave {
    * @param {number} autonomia - Autonomia da aeronave em km.
    */
   constructor(prefixo, tipo, velocidadeCruzeiro, autonomia) {
-    this.prefixo = prefixo;
-    this.tipo = tipo;
-    this.velocidadeCruzeiro = velocidadeCruzeiro;
-    this.autonomia = autonomia;
+    this._prefixo = prefixo;
+    this._tipo = tipo;
+    this._velocidadeCruzeiro = velocidadeCruzeiro;
+    this._autonomia = autonomia;
+  }
+
+  // Getters
+  get prefixo() {
+    return this._prefixo;
+  }
+
+  get tipo() {
+    return this._tipo;
+  }
+
+  get velocidadeCruzeiro() {
+    return this._velocidadeCruzeiro;
+  }
+
+  get autonomia() {
+    return this._autonomia;
+  }
+
+  // Setters
+  set prefixo(value) {
+    this._prefixo = value;
+  }
+
+  set tipo(value) {
+    this._tipo = value;
+  }
+
+  set velocidadeCruzeiro(value) {
+    this._velocidadeCruzeiro = value;
+  }
+
+  set autonomia(value) {
+    this._autonomia = value;
   }
 
   /**
