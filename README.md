@@ -1,7 +1,7 @@
-
 # oop
 
 <h4>Project to study OOP (Object-Oriented Programming)</h4>
+<a href="https://github.com/TatianaFischer/oop">Github</a>
 
 <p> Programação Orientada a Objetos (POO) é um paradigma de programação que utiliza "objetos" para modelar partes do sistema que estamos construindo. Esses objetos são instâncias de "classes", que definem o comportamento e os estados possíveis de seus objetos. </p>
 
@@ -115,7 +115,6 @@ A POO é uma maneira poderosa de organizar e estruturar seu código. Utilizando 
 
 ![image](https://github.com/TatianaFischer/oop/assets/63520464/af75248c-14fb-4ce6-b055-56934da4c207)
 
-
 ## Instalação
 
 Certifique-se de ter o Node.js e npm instalados na sua máquina. Para instalar as dependências do projeto, execute o seguinte comando na raiz do projeto:
@@ -123,14 +122,18 @@ Certifique-se de ter o Node.js e npm instalados na sua máquina. Para instalar a
 ```bash
 npm install
 ```
+
 ## Rodar projeto
+
 ```
 npm start
 
 ```
 
 ## Rodar testes:
+
 Utilizamos a lib Jest
+
 ```
 npm test
 ```
