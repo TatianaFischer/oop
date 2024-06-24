@@ -113,6 +113,9 @@ Neste exemplo, criamos uma instância de AeronaveComercialPassageiros e chamamos
 <h4>Conclusão</h4>
 A POO é uma maneira poderosa de organizar e estruturar seu código. Utilizando conceitos como classes, herança, encapsulamento, polimorfismo e abstração, você pode criar sistemas modulares, reutilizáveis e fáceis de manter. No caso das classes Aeronave e AeronaveComercialPassageiros, vemos como a herança permite especializar comportamentos e atributos de uma classe base, mantendo um design claro e eficiente.
 
+![image](https://github.com/TatianaFischer/oop/assets/63520464/af75248c-14fb-4ce6-b055-56934da4c207)
+
+
 ## Instalação
 
 Certifique-se de ter o Node.js e npm instalados na sua máquina. Para instalar as dependências do projeto, execute o seguinte comando na raiz do projeto:
