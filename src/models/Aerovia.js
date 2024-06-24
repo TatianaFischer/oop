@@ -7,30 +7,47 @@ class Aerovia {
    * @param {number} tamanho - Tamanho da aerovia em quilômetros.
    */
   constructor(id, aeroportoOrigem, aeroportoDestino, tamanho) {
-    this.id = id;
-    this.aeroportoOrigem = aeroportoOrigem;
-    this.aeroportoDestino = aeroportoDestino;
-    this.tamanho = tamanho;
-    this.altitudesOcupadas = {};
+    this._id = id;
+    this._aeroportoOrigem = aeroportoOrigem;
+    this._aeroportoDestino = aeroportoDestino;
+    this._tamanho = tamanho;
+    this._altitudesOcupadas = {};
+  }
+
+  get id() {
+    return this._id;
+  }
+
+  get aeroportoOrigem() {
+    return this._aeroportoOrigem;
+  }
+
+  get aeroportoDestino() {
+    return this._aeroportoDestino;
+  }
+
+  get tamanho() {
+    return this._tamanho;
+  }
+
+  get altitudesOcupadas() {
+    return this._altitudesOcupadas;
   }
 
   /**
-   * Quanto que a aeronave Ocupa um slot de altitude em uma data e horário específicos.
+   * Ocupa um slot de altitude em uma data e horário específicos.
    * @param {string} data - Data no formato 'YYYY-MM-DD'.
    * @param {string} horario - Horário no formato 'HH:mm'.
    * @param {number} altitude - Altitude a ser ocupada.
    */
   ocuparSlot(data, horario, altitude) {
-    // Se a data ainda não existe no objeto altitudesOcupadas, cria uma nova entrada
-    if (!this.altitudesOcupadas[data]) {
-      this.altitudesOcupadas[data] = {};
+    if (!this._altitudesOcupadas[data]) {
+      this._altitudesOcupadas[data] = {};
     }
-    // Se o horário ainda não existe no objeto altitudesOcupadas para a data específica, cria uma nova entrada
-    if (!this.altitudesOcupadas[data][horario]) {
-      this.altitudesOcupadas[data][horario] = [];
+    if (!this._altitudesOcupadas[data][horario]) {
+      this._altitudesOcupadas[data][horario] = [];
     }
-    // Adiciona a altitude à lista de altitudes ocupadas para a data e horário especificados
-    this.altitudesOcupadas[data][horario].push(altitude);
+    this._altitudesOcupadas[data][horario].push(altitude);
   }
 
   /**
@@ -40,18 +57,11 @@ class Aerovia {
    * @param {number} altitude - Altitude a ser verificada.
    * @returns {boolean} - Retorna true se a altitude estiver disponível, false caso contrário.
    */
-
   verificarDisponibilidade(data, horario, altitude) {
-    // Se não há entradas para a data ou horário especificados, retorna true para dizer que está diponível o slot
-    if (
-      !this.altitudesOcupadas[data] ||
-      !this.altitudesOcupadas[data][horario]
-    ) {
+    if (!this._altitudesOcupadas[data] || !this._altitudesOcupadas[data][horario]) {
       return true;
     }
-
-    // Verifica se a altitude está ocupada na data e horário especificados
-    return !this.altitudesOcupadas[data][horario].includes(altitude);
+    return !this._altitudesOcupadas[data][horario].includes(altitude);
   }
 }
 

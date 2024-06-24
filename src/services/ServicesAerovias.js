@@ -4,16 +4,15 @@
 
 class ServicesAerovias {
   constructor() {
-    this.aerovias = [];
+    this._aerovias = [];
   }
 
   /**
    * Adiciona uma aerovia ao array de aerovias.
    * @param {Aerovia} aerovia - A instância da aerovia a ser adicionada.
    */
-
   adicionarAerovia(aerovia) {
-    this.aerovias.push(aerovia); // Array para armazenar as aerovias
+    this._aerovias.push(aerovia);
   }
 
   /**
@@ -22,7 +21,7 @@ class ServicesAerovias {
    * @returns {Aerovia} - A aerovia correspondente ao ID.
    */
   obterAeroviaPorId(id) {
-    return this.aerovias.find(aerovia => aerovia.id === id);
+    return this._aerovias.find(aerovia => aerovia.id === id);
   }
 
   /**
@@ -30,7 +29,7 @@ class ServicesAerovias {
    * @returns {Array} - O array de todas as aerovias.
    */
   listarAerovias() {
-    return this.aerovias;
+    return this._aerovias;
   }
 
   /**
@@ -39,12 +38,11 @@ class ServicesAerovias {
    * @param {string} aeroportoDestino - O aeroporto de destino.
    * @returns {Array} - O array de aerovias entre os aeroportos especificados.
    */
-
   listarAeroviasEntreAeroportos(aeroportoOrigem, aeroportoDestino) {
-    return this.aerovias.filter(
+    return this._aerovias.filter(
       aerovia =>
         aerovia.aeroportoOrigem === aeroportoOrigem &&
-        aerovia.aeroportoDestino === aeroportoDestino,
+        aerovia.aeroportoDestino === aeroportoDestino
     );
   }
 }

@@ -3,7 +3,7 @@
 // Ela implementa métodos para adicionar, obter e listar aeronaves.
 class ServicesAeronaves {
   constructor() {
-    this.aeronaves = []; // Array para armazenar as aeronaves
+    this._aeronaves = []; // Array para armazenar as aeronaves
   }
 
   /**
@@ -11,7 +11,7 @@ class ServicesAeronaves {
    * @param {Aeronave} aeronave - A instância da aeronave a ser adicionada.
    */
   adicionarAeronave(aeronave) {
-    this.aeronaves.push(aeronave);
+    this._aeronaves.push(aeronave);
   }
 
   /**
@@ -20,7 +20,7 @@ class ServicesAeronaves {
    * @returns {Aeronave} - A aeronave correspondente ao prefixo.
    */
   obterAeronavePorPrefixo(prefixo) {
-    return this.aeronaves.find(aeronave => aeronave.prefixo === prefixo);
+    return this._aeronaves.find(aeronave => aeronave.prefixo === prefixo);
   }
 
   /**
@@ -28,8 +28,9 @@ class ServicesAeronaves {
    * @returns {Array} - O array de todas as aeronaves.
    */
   listarAeronaves() {
-    return this.aeronaves;
+    return this._aeronaves;
   }
 }
 
 export { ServicesAeronaves };
+

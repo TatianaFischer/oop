@@ -21,7 +21,7 @@ class AeroNaveParticular extends Aeronave {
   }
 
     exibirDetalhes() {
-    return `${super.exibirDetalhes()}, Empresa manutencao: ${this._empresaManutencao}`;
+    return `${super.exibirDetalhes()}, Empresa de Manutenção: ${this._empresaManutencao}`;
   }
 }
 

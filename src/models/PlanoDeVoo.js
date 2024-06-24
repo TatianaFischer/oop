@@ -9,33 +9,56 @@ class PlanoDeVoo {
    * @param {string} aerovia - Identificação da aerovia a ser utilizada.
    * @param {number} altitude - Altitude planejada para o voo.
    */
-  constructor(
-    id,
-    matriculaPiloto,
-    prefixoAeronave,
-    data,
-    horario,
-    aerovia,
-    altitude,
-  ) {
-    this.id = id;
-    this.matriculaPiloto = matriculaPiloto;
-    this.prefixoAeronave = prefixoAeronave;
-    this.data = data;
-    this.horario = horario;
-    this.aerovia = aerovia;
-    this.altitude = altitude;
-    this.slotsOcupados = [];
-    this.cancelado = false;
+  constructor(id, matriculaPiloto, prefixoAeronave, data, horario, aerovia, altitude) {
+    this._id = id;
+    this._matriculaPiloto = matriculaPiloto;
+    this._prefixoAeronave = prefixoAeronave;
+    this._data = data;
+    this._horario = horario;
+    this._aerovia = aerovia;
+    this._altitude = altitude;
+    this._slotsOcupados = [];
+    this._cancelado = false;
   }
 
-  /**
-   * Método para cancelar o plano de voo.
-   * Define o atributo 'cancelado' como true.
-   */
+  get id() {
+    return this._id;
+  }
+
+  get matriculaPiloto() {
+    return this._matriculaPiloto;
+  }
+
+  get prefixoAeronave() {
+    return this._prefixoAeronave;
+  }
+
+  get data() {
+    return this._data;
+  }
+
+  get horario() {
+    return this._horario;
+  }
+
+  get aerovia() {
+    return this._aerovia;
+  }
+
+  get altitude() {
+    return this._altitude;
+  }
+
+  get slotsOcupados() {
+    return this._slotsOcupados;
+  }
+
+  get cancelado() {
+    return this._cancelado;
+  }
 
   cancelar() {
-    this.cancelado = true;
+    this._cancelado = true;
   }
 }
 
