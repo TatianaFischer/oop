@@ -2,14 +2,14 @@ import { Aeronave } from './Aeronave.js';
 
 class AeronaveComercial extends Aeronave {
   /**
-   * Construtor da classe AeronaveComercial.
-   * @param {string} prefixo - Prefixo da aeronave.
-   * @param {number} velocidadeCruzeiro - Velocidade de cruzeiro da aeronave em km/h.
-   * @param {number} autonomia - Autonomia da aeronave em km.
-   * @param {string} companhiaAerea - Companhia aérea responsável pela aeronave.
+   * Construtor da classe AeronaveComercial
+   * @param {string} prefixo - Prefixo da aeronave
+   * @param {number} velocidadeCruzeiro - Velocidade de cruzeiro da aeronave em km/h
+   * @param {number} autonomia - Autonomia da aeronave em km
+   * @param {string} companhiaAerea - Companhia aérea responsável pela aeronave
    */
-  constructor(prefixo, velocidadeCruzeiro, autonomia, companhiaAerea) {
-    super(prefixo, 'Comercial', velocidadeCruzeiro, autonomia);
+  constructor(prefixo, tipo, velocidadeCruzeiro, autonomia, companhiaAerea) {
+    super(prefixo, tipo, velocidadeCruzeiro, autonomia);
     this._companhiaAerea = companhiaAerea;
   }
 

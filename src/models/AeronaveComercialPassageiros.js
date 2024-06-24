@@ -13,7 +13,7 @@ class AeronaveComercialPassageiros extends AeronaveComercial {
    * @param {number} capacidadePassageiros - Capacidade de passageiros da aeronave.
    */
   constructor(prefixo, velocidadeCruzeiro, autonomia, companhiaAerea, capacidadePassageiros) {
-    super(prefixo, velocidadeCruzeiro, autonomia, companhiaAerea);
+    super(prefixo, 'ComercialPassageiros', velocidadeCruzeiro, autonomia, companhiaAerea);
     this._capacidadePassageiros = capacidadePassageiros;
   }
 

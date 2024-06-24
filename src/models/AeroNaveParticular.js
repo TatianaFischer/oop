@@ -7,7 +7,21 @@ import { Aeronave } from './Aeronave.js';
 class AeroNaveParticular extends Aeronave {
   constructor(prefixo, velocidadeCruzeiro, autonomia, empresaManutencao) {
     super(prefixo, 'Particular', velocidadeCruzeiro, autonomia);
-    this.empresaManutencao = empresaManutencao;
+    this._empresaManutencao = empresaManutencao;
+  }
+
+  // Getters
+  get empresaManutencao() {
+    return this._empresaManutencao;
+  }
+
+  // Setters
+  set empresaManutencao(value) {
+    this._empresaManutencao = value;
+  }
+
+    exibirDetalhes() {
+    return `${super.exibirDetalhes()}, Empresa manutencao: ${this._empresaManutencao}`;
   }
 }
 
